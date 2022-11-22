@@ -1,0 +1,31 @@
+/* Como hago para apuntar a todos y cada uno de los elementos del HTML con CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.fondo-rosa {
+    background: pink;
+    border: 5px solid rgb(247, 81, 109);
+    padding: 10px;
+    margin: 50px 20px;
+}
+
+.img-receta {
+    width: 100%;
+}
+
+.ingredientes, .pasos {
+    width: 50%;
+    float: left;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+ul, ol {
+    list-style-position: inside;
+}

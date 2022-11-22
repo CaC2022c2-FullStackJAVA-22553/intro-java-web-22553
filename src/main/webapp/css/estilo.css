@@ -1,0 +1,51 @@
+p {
+    color: rgb(16, 28, 85);
+    text-align: center;
+}
+
+html {
+    /*Por default, el tamaño de referencia es 16px*/
+    font-size: 18px;
+    font-family: "DynaPuff", Lato, Arial, sans-serif;
+}
+
+.caja {
+    font-size: 38px;
+    background: yellow;
+}
+
+h1 {
+    color: blue;
+    font-size: 2em;
+    font-family: "Poppins", "Garamond", serif;
+}
+
+.otroTamanio {
+    font-size: 100%;
+}
+
+#mila {
+    display: block;
+}
+
+.ingredientes-mila {
+    list-style-image: url("../img/milanesa.jpg");
+}
+
+.violeta-negrita {
+    color: purple;
+    font-weight: bold;
+}
+
+.fondo-rosa {
+    background: pink;
+}
+
+#itemEspecial {
+    font-weight: bolder;
+}
+
+ol li {
+    color: orange;
+}
+
