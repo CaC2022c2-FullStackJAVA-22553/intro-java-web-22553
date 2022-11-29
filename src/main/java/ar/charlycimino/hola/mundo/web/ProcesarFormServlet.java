@@ -17,16 +17,23 @@ import java.io.PrintWriter;
  */
 @WebServlet(name = "procesar", urlPatterns = {"/procesar-saludo"})
 public class ProcesarFormServlet extends HttpServlet {
+    
+    /*
+        QUIERO QUE ME MANDE FECHA DE NACIMIENTO Y YO (SERVIDOR) LE CONTESTE SU EDAD
+    */
+    private Modelo m;
+    
+    public ProcesarFormServlet() {
+        this.m = new Modelo();
+    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String nombreDelCliente = req.getParameter("fname");
-        
-        PrintWriter out = resp.getWriter();
-        out.println("<html>");
-        out.println("<head><title>SALUDANDO</title></head>");
-        out.println("<body><h1>Hola " + nombreDelCliente + "</h1></body>");
-        out.println("</html>");
+        String fechaNac = req.getParameter("fDeNac");
+        int laEdad = m.edad(fechaNac);
+        req.setAttribute("laEdadDelUsuario", laEdad);
+        req.getRequestDispatcher("saludo.jsp").forward(req, resp);
     } 
     
+   
 }
